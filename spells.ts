@@ -2,7 +2,7 @@ import { ApolloServer, gql } from 'apollo-server';
 import { buildFederatedSchema } from '@apollo/federation';
 
 const typeDefs = gql`
-	type Spell {
+	type Spell @key(fields: "id") {
 		id: Int!
 		name: String
 	}
